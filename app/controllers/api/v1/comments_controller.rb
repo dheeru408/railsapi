@@ -38,7 +38,4 @@ class Api::V1::CommentsController < Api::BaseController
 	def comment_params
 		params.require(:comment).permit(:title,:body, :post_id)
 	end	
-
-end	
-
-
+end

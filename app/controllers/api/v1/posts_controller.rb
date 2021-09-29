@@ -1,8 +1,5 @@
 class Api::V1::PostsController < Api::BaseController
-
-
 	respond_to :json
-
 
 	def index
 		respond_with current_user.posts
@@ -39,6 +36,4 @@ class Api::V1::PostsController < Api::BaseController
 	def post_params
 		params.require(:post).permit(:title,:body)
 	end	
-
-
 end
