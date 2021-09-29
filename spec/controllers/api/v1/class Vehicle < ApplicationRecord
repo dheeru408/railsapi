@@ -1,0 +1,52 @@
+class Vehicle < ApplicationRecord
+end
+
+class Car < Pet
+end
+
+classs Bike < Pet
+end
+
+name: 
+size
+color:
+company_name:
+engine:
+
+is_starring: true/false
+is_handle: true/false
+
+1. STI inheritance
+2. ActiveRecord Methods+includes and joins
+3. hash methods 10
+https://guides.rubyonrails.org/active_record_querying.html
+
+
+users = User.joins(:posts) //Query 1 //(it takes the users where these posts are available)
+
+
+users.each do |user|
+
+  user.posts.each do |post| //N
+    name: <%= post.body %>
+  end
+end
+N+1 query
+==============================
+users = User.includes(:posts)   //(it takes users and posts both in variable)
+users.each do |user|
+
+  user.posts.each do |post| //N
+    name: <%= post.body %>
+  end
+end
+
+==========Joins Advantage==========
+
+users = User.joins(:posts).select("users.id as user_id, posts.id as post_id, name, body")
+users.each do |user|
+  user.id
+  user.post_id
+  user.name
+  user.body
+end
