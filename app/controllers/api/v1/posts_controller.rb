@@ -27,7 +27,6 @@ class Api::V1::PostsController < Api::BaseController
     		render :json => {:deleted => "true"}
     	else
     		render :json => {:deleted => "false"}
-    	
     	end    
     end	
 
