@@ -29,7 +29,6 @@ class Api::V1::CommentsController < Api::BaseController
     		render :json => {:deleted => "true"}
     	else
     		render :json => {:deleted => "false"}
-    	
     	end  
 	end	
 
